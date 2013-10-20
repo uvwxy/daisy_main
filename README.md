@@ -5,7 +5,7 @@ This repo contains the code of the main Android Application from my demo present
 
 To compile the code you need to add the following android library projects  to your workspace:
 
-From GitHub:
+Own libraries:
 
 - libdaisy [link](https://github.com/uvwxy/libdaisy)
 - libdaisy_ar [link](https://github.com/uvwxy/libdaisy_ar)
@@ -13,9 +13,12 @@ From GitHub:
 - libsoundfinder [link](https://github.com/uvwxy/libsoundfinder)
 - libuvwxy [link](https://github.com/uvwxy/libuvwxy)
 - libxbee [link](https://github.com/uvwxy/libxbee)
+
+modified libraries:
+
 - ZXingCaptureActivity [link](https://github.com/uvwxy/zxingcapturemod)
 
-other library projects:
+other libraries:
 
 - DroidAR [link](https://github.com/bitstars/droidar)
 - OSMBonusPack [link](https://code.google.com/p/osmbonuspack/)

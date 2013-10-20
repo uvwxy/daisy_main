@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="de.uvwxy.daisy.nodemap"
+    android:versionCode="13"
+    android:versionName="0.1.3" >
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!--
+        IMPORTANT: The following permissions should also be added to each project 
+		which uses the DroidAR Library
+    -->
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/daisy"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="de.uvwxy.daisy.nodemap.gui.MainListActivity"
+            android:configChanges="keyboard|orientation|screenLayout"
+            android:label="@string/title_nodeview_list" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="de.uvwxy.daisy.nodemap.gui.DetailActivity"
+            android:configChanges="keyboard|orientation|screenLayout"
+            android:label="@string/title_nodeview_detail"
+            android:parentActivityName=".gui.ListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".NodeViewListActivity" />
+        </activity>
+        <activity
+            android:name="de.uvwxy.daisy.qrcodescanner.ActivityScan"
+            android:configChanges="keyboardHidden|orientation|screenSize" >
+            <intent-filter>
+                <action android:name="de.uvwxy.daisy.SCAN_NODE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="de.uvwxy.daisy.nodemap.gui.ActivityNodeDetails"
+            android:configChanges="keyboard|orientation|screenLayout" >
+            <intent-filter>
+                <action android:name="de.uvwxy.daisy.SHOW_NODE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="de.uvwxy.melogsta.ActivityShowLogs" >
+        </activity>
+        <activity
+            android:name="com.google.zxing.client.android.CaptureActivity"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:stateNotNeeded="true"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <!--
+            IMPORTANT: The following activities have to be added to each project 
+			which imports the DroidAR Library
+        -->
+
+        <activity
+            android:name="system.ArActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+        </activity>
+
+        <!-- Custom List is used to easily display lists of any type of object -->
+        <activity android:name="gui.CustomListActivity" >
+        </activity>
+
+        <!-- the error handler will be automatically displayed when an error appears -->
+        <activity
+            android:name="system.ErrorHandler"
+            android:process=":myexeptionprocess"
+            android:taskAffinity="system.ErrorHandler" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <data android:mimeType="errors/myUnhandleCatcher" />
+            </intent-filter>
+        </activity>
+
+        <!-- is needed to display information on application startup -->
+        <activity
+            android:name="gui.InfoScreen"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+
+        <!-- an activity to easily display any kind of ui -->
+        <activity
+            android:name="gui.simpleUI.SimpleUI"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+        <activity
+            android:name="de.uvwxy.daisy.nodemap.gui.ActivityAnnotation"
+            android:label="@string/title_activity_activity_annotation" >
+        </activity>
+        <activity android:name="de.uvwxy.soundfinder.SoundFinder" >
+        </activity>
+    </application>
+
+</manifest>

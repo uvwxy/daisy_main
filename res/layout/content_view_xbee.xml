@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlXBeeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/card" >
+
+    <TextView
+        android:id="@+id/lblXBeeConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/open_device"
+        android:textAppearance="@style/CardTitle" />
+
+    <View
+        android:id="@+id/barXbee0"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_alignBottom="@+id/lblXBeeConfig"
+        android:layout_alignParentLeft="true"
+        android:background="@color/stroke" />
+
+    <TextView
+        android:id="@+id/lblXBeeSendCommand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btnXBeeOpen"
+        android:text="@string/send_command"
+        android:textAppearance="@style/CardTitle" />
+
+    <View
+        android:id="@+id/barXbee1"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/lblXBeeSendCommand"
+        android:background="@color/stroke" />
+
+    <View
+        android:id="@+id/barXbee2"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/TextView01"
+        android:background="@color/stroke" />
+
+    <ListView
+        android:id="@+id/lvXBeeReceivedMessages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/barXbee2" >
+    </ListView>
+
+    <Button
+        android:id="@+id/btnXBeeOpen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lblXBeeSendCommand"
+        android:layout_below="@+id/lblXBeeConfig"
+        android:text="@string/open" />
+
+    <EditText
+        android:id="@+id/etXBeeBaud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btnXBeeOpen"
+        android:layout_toLeftOf="@+id/btnXBeeClose"
+        android:layout_toRightOf="@+id/btnXBeeOpen"
+        android:ems="10"
+        android:hint="Baud (9600)"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnXBeeClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lblXBeeSendCommand"
+        android:layout_alignParentRight="true"
+        android:text="@string/close" />
+
+    <TextView
+        android:id="@+id/tvXbee0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etXBeeParams"
+        android:layout_below="@+id/barXbee1"
+        android:text="@string/command"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Spinner
+        android:id="@+id/spXBeeCommands"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvXbee0" />
+
+    <TextView
+        android:id="@+id/tvBubbleNodeBattery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spXBeeCommands"
+        android:text="@string/hex_parameters"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/etXBeeParams"
+        android:text="@string/received_messages"
+        android:textAppearance="@style/CardTitle" />
+
+    <Button
+        android:id="@+id/btnXBeeSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/barXbee1"
+        android:text="@string/send" />
+
+    <EditText
+        android:id="@+id/etXBeeParams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvBubbleNodeBattery"
+        android:ems="10"
+        android:hint="hexadecimal" >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>

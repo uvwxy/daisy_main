@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:clickable="false"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:clickable="false" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="6dp"
+            android:background="@drawable/card_menu"
+            android:clickable="false"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/lblActions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/actions"
+                android:textAppearance="@style/CardTitle" />
+
+            <View
+                android:id="@+id/View00"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:background="@color/stroke" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/btnMapScanNode"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scan_node" />
+
+                <Button
+                    android:id="@+id/btnMapAddNote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Note" />
+
+                <Button
+                    android:id="@+id/btnMapAddImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Image" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblPOIS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/overlays"
+                android:textAppearance="@style/CardTitle" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_alignParentLeft="true"
+                android:background="@color/stroke" />
+
+            <CheckBox
+                android:id="@+id/cbOverlayChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chat" />
+
+            <CheckBox
+                android:id="@+id/cbOverlayNodes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sensor_nodes" />
+
+            <CheckBox
+                android:id="@+id/cbOverlayNetworkTraffic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Network Traffic" />
+
+            <CheckBox
+                android:id="@+id/cbOverlayNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notes" />
+
+            <CheckBox
+                android:id="@+id/cbOverlayImages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lmages" />
+
+            <TextView
+                android:id="@+id/lblMapArchives"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/map_archives"
+                android:textAppearance="@style/CardTitle" />
+
+            <View
+                android:id="@+id/View04"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_alignParentLeft="true"
+                android:background="@color/stroke" />
+
+            <LinearLayout
+                android:id="@+id/llOverlays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblLayers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/map_online_cached"
+                android:textAppearance="@style/CardTitle" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_alignParentLeft="true"
+                android:background="@color/stroke" />
+
+            <RadioGroup
+                android:id="@+id/rgMaps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/rdOSM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/osm" />
+
+                <RadioButton
+                    android:id="@+id/radio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bing" />
+
+                <RadioButton
+                    android:id="@+id/radio2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Google" />
+            </RadioGroup>
+
+            <View
+                android:id="@+id/viewBottomSpacer"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/card" >
+
+            <TextView
+                android:id="@+id/lblPScanBT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/bluetooth_scan"
+                android:textAppearance="@style/CardTitle" />
+
+            <View
+                android:id="@+id/barPC0"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/lblPScanBT"
+                android:background="@color/stroke" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/barPC0"
+                android:layout_marginBottom="6dp" >
+
+                <ToggleButton
+                    android:id="@+id/tbtnBTScan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:textOff="@string/scan_off"
+                    android:textOn="@string/scan_on" />
+
+                <ToggleButton
+                    android:id="@+id/tbtnBTListen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/tbtnBTScan"
+                    android:textOff="@string/listen_off"
+                    android:textOn="@string/listen_on" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/lblPScanWifiP2p"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/relativeLayout1"
+                android:text="@string/wifi_p2p_scan"
+                android:textAppearance="@style/CardTitle" />
+
+            <View
+                android:id="@+id/barPC1"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/lblPScanWifiP2p"
+                android:background="@color/stroke" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/barPC1"
+                android:layout_marginBottom="6dp" >
+
+                <ToggleButton
+                    android:id="@+id/tbtnWIFIP2PScan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="@string/scan_off"
+                    android:textOn="@string/scan_on" />
+
+                <ToggleButton
+                    android:id="@+id/tbtnWIFIP2PListen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/tbtnWIFIP2PScan"
+                    android:textOff="@string/listen_off"
+                    android:textOn="@string/listen_on" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/lblPScanWifiAP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/relativeLayout2"
+                android:text="@string/wifi_ap_scan"
+                android:textAppearance="@style/CardTitle" />
+
+            <View
+                android:id="@+id/View03"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/lblPScanWifiAP"
+                android:background="@color/stroke" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/View03" >
+
+                <ToggleButton
+                    android:id="@+id/tbtnWIFIAPScan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="@string/scan_off"
+                    android:textOn="@string/scan_on" />
+
+                <ToggleButton
+                    android:id="@+id/tbtnWIFIAPListen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/tbtnWIFIAPScan"
+                    android:textOff="@string/listen_off"
+                    android:textOn="@string/listen_on" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/lblPScanList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/relativeLayout3"
+                android:text="@string/discovered_devices"
+                android:textAppearance="@style/CardTitle" />
+
+            <View
+                android:id="@+id/View04"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/lblPScanList"
+                android:background="@color/stroke" />
+
+            <LinearLayout
+                android:id="@+id/llPScanDiscoveredDevices"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/View04"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblPScanList2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/llPScanDiscoveredDevices"
+                android:text="@string/participating_devices"
+                android:textAppearance="@style/CardTitle" />
+
+            <View
+                android:id="@+id/View05"
+                android:layout_width="wrap_content"
+                android:layout_height="2dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/lblPScanList2"
+                android:background="@color/stroke" />
+
+            <LinearLayout
+                android:id="@+id/llPScanParticipatingDevices"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/View05"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

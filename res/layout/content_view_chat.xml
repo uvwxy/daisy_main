@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/card" >
+
+        <EditText
+            android:id="@+id/tvChatInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/lvChat"
+            android:layout_toLeftOf="@+id/btnChatSend"
+            android:ems="10" >
+        </EditText>
+
+        <ListView
+            android:id="@+id/lvChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnChatSend"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/barMessages0"
+            android:divider="@null"
+            android:dividerHeight="0dp" >
+        </ListView>
+
+        <Button
+            android:id="@+id/btnChatSend"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="@string/send" />
+
+        <TextView
+            android:id="@+id/lblChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="Messages"
+            android:textAppearance="@style/CardTitle" />
+
+        <View
+            android:id="@+id/barMessages0"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="false"
+            android:layout_below="@+id/lblChat"
+            android:background="@color/stroke" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -6,6 +6,7 @@ import java.util.HashMap;
 
 import org.osmdroid.ResourceProxy;
 import org.osmdroid.api.IGeoPoint;
+import org.osmdroid.api.IMapController;
 import org.osmdroid.bonuspack.overlays.MapEventsOverlay;
 import org.osmdroid.bonuspack.overlays.MapEventsReceiver;
 import org.osmdroid.tileprovider.MapTileProviderArray;
@@ -274,7 +275,7 @@ public class CVMap extends CV {
 			if (mapViewConfig != null) {
 				GeoPoint mapCenter = new GeoPoint(mapViewConfig.getCenterLatitudeE6(), mapViewConfig.getCenterLongitudeE6());
 				if (osmMap != null) {
-					MapController osmMapController = osmMap.getController();
+					IMapController osmMapController = osmMap.getController();
 					if (osmMapController != null) {
 						osmMapController.setZoom(mapViewConfig.getZoomLevel());
 						osmMapController.setCenter(mapCenter);

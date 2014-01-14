@@ -21,6 +21,7 @@ import de.uvwxy.helper.IntentTools;
 import de.uvwxy.helper.IntentTools.ReturnStringECallback;
 import de.uvwxy.helper.StringE;
 
+@SuppressWarnings("unused")
 public class CVDeployment extends CV {
 	private View view1 = null;
 
@@ -50,7 +51,8 @@ public class CVDeployment extends CV {
 			if (se != null) {
 
 				String res = CM.DAISY.loadDeployment(se.e);
-				Toast.makeText(CM.CTX, "Selected deployment \"" + se.s + "\":\n(" + se.e + ")\n\nLoad State: " + res, Toast.LENGTH_LONG).show();
+				Toast.makeText(CM.CTX, "Selected deployment \"" + se.s + "\":\n(" + se.e + ")\n\nLoad State: " + res,
+						Toast.LENGTH_LONG).show();
 				Messages.DeploymentHeader header = CM.DAISY.loadDeploymentHeader(se.e);
 				etDeploymentName.setText(header.getDeploymentName());
 				tvDeploymentDate.setText(DateTools.getDateTimeLong(CM.CTX, header.getIdAndTimeStamp()));
@@ -130,7 +132,8 @@ public class CVDeployment extends CV {
 
 			@Override
 			public void onClick(View v) {
-				IntentTools.userSelectStringE(CM.CTX, "Delete a deployment", CM.DAISY.getAllDeploymentFileNames(), deleteAction);
+				IntentTools.userSelectStringE(CM.CTX, "Delete a deployment", CM.DAISY.getAllDeploymentFileNames(),
+						deleteAction);
 			}
 		});
 
@@ -171,7 +174,8 @@ public class CVDeployment extends CV {
 
 		tvDeploymentDate.setText("[now ~" + DateTools.getDateTime(CM.CTX, System.currentTimeMillis()) + "]");
 
-		tvDeploymentOnDiskInfo.setText(String.format(CM.CTX.getString(R.string.there_are_d_deployments_on_this_device), CM.DAISY.getNumberOfDeployments()));
+		tvDeploymentOnDiskInfo.setText(String.format(CM.CTX.getString(R.string.there_are_d_deployments_on_this_device),
+				CM.DAISY.getNumberOfDeployments()));
 		return rootView;
 	}
 

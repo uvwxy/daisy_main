@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import de.uvwxy.daisy.nodemap.R;
-import de.uvwxy.daisy.nodemap.guicontent.CM;
 
 public abstract class CV {
 	public String ID;

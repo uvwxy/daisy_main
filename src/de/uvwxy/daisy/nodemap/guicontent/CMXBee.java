@@ -18,8 +18,6 @@ import de.uvwxy.xbee.apimode.Frame;
 import de.uvwxy.xbee.apimode.FrameCallback;
 import de.uvwxy.xbee.apimode.FrameParserEscaped;
 import de.uvwxy.xbee.apimode.messages.APIMessage;
-import de.uvwxy.xbee.apimode.messages.MsgATCommandResponse;
-import de.uvwxy.xbee.apimode.messages.MsgZigBeeReceivePacket;
 import de.uvwxy.xbee.commands.ATCommand;
 
 public class CMXBee implements IDestroy {

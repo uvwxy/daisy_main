@@ -50,6 +50,7 @@ public class ActivityNodeDetails extends Activity {
 	private static final int ACC_Z = 2;
 	private static final int ACC_Y = 1;
 	private static final int ACC_X = 0;
+	@SuppressWarnings("unused")
 	private ScrollView scrollView1 = null;
 	private LinearLayout llDeviceMainInsideScrollView = null;
 	private LinearLayout llCharView = null;
@@ -111,7 +112,7 @@ public class ActivityNodeDetails extends Activity {
 				if (CM.LOC.getLastLocation() != null) {
 					dist = CM.LOC.getLastLocation().distanceTo(ProtoHelper.protoLocationToAndroidLocation(l));
 				}
-				SoundFinder.findNode(CM.ACT, l.getLatitude(), l.getLongitude(), l.getAltitude(), 25, 15, 250);
+				SoundFinder.findNode(CM.ACT, l.getLatitude(), l.getLongitude(), l.getAltitude(), 25, 15, dist);
 			}
 		});
 

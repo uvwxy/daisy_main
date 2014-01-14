@@ -19,7 +19,9 @@ public class LogMessageArrayAdapter extends ArrayAdapter<LogMessage> {
 	/**
 		 * 
 		 */
+	@SuppressWarnings("unused")
 	private final CVLogs cvLogs;
+	@SuppressWarnings("unused")
 	private Context context;
 	private LayoutInflater inflater;
 	private ArrayList<LogMessage> messageList;

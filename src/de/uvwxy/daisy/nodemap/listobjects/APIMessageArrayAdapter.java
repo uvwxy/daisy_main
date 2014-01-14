@@ -19,6 +19,7 @@ import de.uvwxy.daisy.sensornode.SensorNetworkMessageParser;
 import de.uvwxy.xbee.apimode.messages.APIMessage;
 
 public class APIMessageArrayAdapter extends ArrayAdapter<APIMessage> {
+	@SuppressWarnings("unused")
 	private final CVXBee cvXBee;
 	private Context context;
 	private LayoutInflater inflater;

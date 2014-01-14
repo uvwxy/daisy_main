@@ -19,6 +19,7 @@ import de.uvwxy.helper.BitmapTools;
 
 public class SampleGridViewAdapter extends BaseAdapter {
 	private final Context context;
+	@SuppressWarnings("unused")
 	private final Transformation cropSquare = new CropSquareTransformation();
 	private List<String> filePaths = null;
 

@@ -1,5 +1,6 @@
 package de.uvwxy.daisy.nodemap.gui;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -110,6 +111,7 @@ public class MainListActivity extends FragmentActivity implements MainListFragme
 		btc.setInterfaceEnabled(true);
 
 		final PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
+		// TODO: fix this deprecation warning:
 		this.mWakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "My Tag");
 		this.mWakeLock.acquire();
 
@@ -232,6 +234,7 @@ public class MainListActivity extends FragmentActivity implements MainListFragme
 		return false;
 	}
 
+	@SuppressLint("Wakelock")
 	@Override
 	protected void onDestroy() {
 		this.mWakeLock.release();

@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import de.uvwxy.daisy.nodemap.guiviews.CV;
 
 public class CVArrayAdapter extends ArrayAdapter<CV> {
+	@SuppressWarnings("unused")
 	private Context ctx;
 	private LayoutInflater inflater;
 	private ArrayList<CV> contentViewList;

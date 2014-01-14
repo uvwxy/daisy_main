@@ -20,12 +20,10 @@ import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CompoundButton;
-import android.widget.ListView;
-import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
+import android.widget.ListView;
 import android.widget.ScrollView;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
@@ -61,7 +59,7 @@ import de.uvwxy.helper.FileTools;
 import de.uvwxy.helper.IntentTools;
 import de.uvwxy.helper.IntentTools.ReturnStringECallback;
 import de.uvwxy.helper.StringE;
-
+@SuppressWarnings("unused")
 public class CVBalloonClient extends CV {
 
 	private View barBalloonCardActions0 = null;

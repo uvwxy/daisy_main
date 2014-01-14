@@ -19,7 +19,9 @@ public class ChatMessageArrayAdapter extends ArrayAdapter<ChatMessage> {
 	/**
 	 * 
 	 */
+	@SuppressWarnings("unused")
 	private final CVChat cvChat;
+	@SuppressWarnings("unused")
 	private Context context;
 	private LayoutInflater inflater;
 	private ArrayList<ChatMessage> messageList;

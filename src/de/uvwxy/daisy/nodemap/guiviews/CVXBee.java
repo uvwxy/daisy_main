@@ -2,9 +2,7 @@ package de.uvwxy.daisy.nodemap.guiviews;
 
 import java.util.ArrayList;
 
-import com.squareup.otto.Subscribe;
-
-
+import android.annotation.SuppressLint;
 import android.content.SharedPreferences.Editor;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -22,16 +20,14 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.squareup.otto.Subscribe;
+
 import de.uvwxy.daisy.nodemap.R;
 import de.uvwxy.daisy.nodemap.guicontent.CM;
 import de.uvwxy.daisy.nodemap.listobjects.APIMessageArrayAdapter;
-import de.uvwxy.daisy.nodemap.listobjects.ChatMessageArrayAdapter;
 import de.uvwxy.helper.IntentTools;
 import de.uvwxy.xbee.apimode.messages.APIMessage;
-import de.uvwxy.xbee.apimode.messages.MsgATCommandResponse;
-import de.uvwxy.xbee.apimode.messages.MsgRXPacket16;
-import de.uvwxy.xbee.apimode.messages.MsgRXPacket64;
-import de.uvwxy.xbee.apimode.messages.MsgZigBeeReceivePacket;
 import de.uvwxy.xbee.commands.ATCommand;
 
 public class CVXBee extends CV {

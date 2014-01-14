@@ -27,7 +27,6 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
-import com.google.protobuf.DescriptorProtos.SourceCodeInfo.Location;
 import com.squareup.otto.Subscribe;
 
 import de.uvwxy.camera.CameraHelper;

@@ -1,8 +1,6 @@
 package de.uvwxy.daisy.nodemap.guicontent;
 
 import android.content.Context;
-import android.location.Location;
-import de.uvwxy.daisy.proto.ProtoHelper;
 import de.uvwxy.sensors.AccelerometerReader;
 import de.uvwxy.sensors.BarometerReader;
 import de.uvwxy.sensors.CompassReader;
@@ -13,6 +11,7 @@ public class CMSensors implements IDestroy {
 	BarometerReader barometerReader = null;
 	AccelerometerReader accelReader = null;
 
+	@SuppressWarnings("unused")
 	private Context mCtx;
 
 	private float[] compassData;

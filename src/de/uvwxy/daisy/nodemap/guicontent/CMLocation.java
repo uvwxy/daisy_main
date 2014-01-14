@@ -10,6 +10,7 @@ import de.uvwxy.sensors.location.LocationReader.LocationStatusCallback;
 public class CMLocation implements IDestroy {
 	GPSWIFIReader locationReader = null;
 	Location lastLocation = new Location("Dummy");
+	@SuppressWarnings("unused")
 	private Context mCtx;
 
 	LocationStatusCallback cbStatus = new LocationStatusCallback() {
